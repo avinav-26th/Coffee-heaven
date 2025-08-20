@@ -8,14 +8,14 @@ import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import Link from "next/link";
 
 const images = [
-  "/images/cafe-bg-carousel/bg-0.png",
-  "/images/cafe-bg-carousel/bg-1.png",
-  "/images/cafe-bg-carousel/bg-2.png",
-  "/images/cafe-bg-carousel/bg-3.png",
-  "/images/cafe-bg-carousel/bg-4.png",
-  "/images/cafe-bg-carousel/bg-5.png",
-  "/images/cafe-bg-carousel/bg-6.png",
-  "/images/cafe-bg-carousel/bg-7.png",
+  "https://res.cloudinary.com/daxydcpj0/image/upload/v1755494969/bg-0_ipmnjk.jpg",
+  "https://res.cloudinary.com/daxydcpj0/image/upload/v1755494969/bg-1_vcu72b.png",
+  "https://res.cloudinary.com/daxydcpj0/image/upload/v1755494969/bg-2_jqadrc.jpg",
+  "https://res.cloudinary.com/daxydcpj0/image/upload/v1755494970/bg-3_u3t4t0.jpg",
+  "https://res.cloudinary.com/daxydcpj0/image/upload/v1755494969/bg-4_ycs3tz.png",
+  "https://res.cloudinary.com/daxydcpj0/image/upload/v1755494970/bg-5_tqmtdj.png",
+  "https://res.cloudinary.com/daxydcpj0/image/upload/v1755494970/bg-6_i7ekpc.png",
+  "https://res.cloudinary.com/daxydcpj0/image/upload/v1755494970/bg-7_filstf.png",
 ];
 
 const rating = 4.4;
@@ -54,9 +54,9 @@ export default function Carousel() {
               <Image
                 src={src}
                 alt={`Slide ${index}`}
-                layout="responsive"
                 width={1920}
                 height={1080}
+                priority
                 className="w-full max-h-screen object-cover"
               />
             </div>
@@ -65,22 +65,22 @@ export default function Carousel() {
       </div>
 
       {/* Google Star Rating Box */}
-      <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#fff5e0] px-7 py-4 rounded-full flex items-center space-x-2 text-black">
+      <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white px-7 py-4 rounded-full flex items-center space-x-2 text-black">
         <p className="text-xl font-">Google: </p>
         {[...Array(5)].map((_, index) => {
           const fillPercentage = Math.min(Math.max(rating - index, 0), 1);
           return (
             <div key={index} className="relative w-6 h-6">
-              <div className="absolute w-full h-full text-black">
-                <Star size={24} fill="black" />
+              <div className="absolute w-full h-full text-gray-500">
+                <Star size={24} fill="gray" />
               </div>
               <div
-                className="absolute top-0 left-0 w-full h-full overflow-hidden"
+                className="absolute top-0 left-0 w-full h-full overflow-hidden text-yellow-300"
                 style={{
                   clipPath: `inset(0 ${(1 - fillPercentage) * 100}% 0 0)`,
                 }}
               >
-                <Star size={24} fill="yellow" />
+                <Star size={24} fill="yellow"/>
               </div>
             </div>
           );

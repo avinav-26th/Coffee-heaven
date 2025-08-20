@@ -20,7 +20,7 @@ export default function AboutUs() {
           viewport={{ once: true }}
         >
           <Image
-            src="/images/cafe-bg-carousel/bg-0.png"
+            src="https://res.cloudinary.com/daxydcpj0/image/upload/v1755494969/bg-0_ipmnjk.jpg"
             alt="Cafe Image"
             width={600}
             height={700}
