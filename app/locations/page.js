@@ -15,8 +15,13 @@ const Map = dynamic(() => import('@/components/Map'), {
 });
 
 export default function LocationsPage() {
-  const [activeLocation, setActiveLocation] = useState(locations[0].coordinates);
-  const [selectedLocationId, setSelectedLocationId] = useState(locations[0].id);
+  // Safe initialization of state
+  const [activeLocation, setActiveLocation] = useState(locations && locations.length > 0 ? locations[0].coordinates : [0, 0]);
+  const [selectedLocationId, setSelectedLocationId] = useState(locations && locations.length > 0 ? locations[0].id : null);
+
+  if (!locations || locations.length === 0) {
+    return <div className="min-h-screen flex items-center justify-center">No locations available.</div>;
+  }
 
   return (
     <div className="bg-[#fffbf0]" id="locations">
@@ -52,9 +57,10 @@ export default function LocationsPage() {
                   </div>
                   <div className="flex gap-8 mt-1 text-md">
                     <Link
-                      href={`https://maps.google.com/?q=${loc.coordinates[0]},${loc.coordinates[1]}`}
+                      href={`http://maps.google.com/maps?q=${loc.coordinates[0]},${loc.coordinates[1]}`}
                       className="text-amber-800 hover:text-amber-600"
                       target="_blank"
+                      rel="noopener noreferrer"
                     >
                       Visit Now
                     </Link>
