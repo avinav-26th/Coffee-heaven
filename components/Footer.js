@@ -157,7 +157,7 @@ const Footer = () => {
         <span className="rounded-full text-[10px] border-[2.5px] border-black mx-4"></span>{" "}
         <p>Coffee Heaven</p>
         <span className="rounded-full text-[10px] border-[2.5px] border-black mx-4"></span>
-        <p>Designed by Avii</p>
+        <p>Designed by Avico Apps</p>
       </div>
     </footer>
   );
