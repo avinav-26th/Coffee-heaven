@@ -1,8 +1,8 @@
 # ☕ Coffee Heaven
 
-A full-stack, modern e-commerce web application for a fictional cafe chain. This project is built with the latest Next.js 14 (App Router) and features a complete, mobile-first OTP authentication system, a database-synced shopping cart, a full order and review system, and a Razorpay payment integration. The entire application has been highly optimized for performance using modern web development patterns.
+A full-stack, modern e-commerce web application for a fictional cafe chain. This project is built with the latest Next.js 14 (App Router) and features a complete, mobile-first OTP authentication system, a database-synced shopping cart, a full order and review system, and a Razorpay payment integration. The entire application has been highly optimized for performance using modern web development patterns, and is also fully responsive.
 
-**Live Demo:** [Link to your deployed website]
+**[Live Demo](https://coffee-heaven-rose.vercel.app/)** 
 
 ---
 
@@ -35,23 +35,23 @@ A full-stack, modern e-commerce web application for a fictional cafe chain. This
 
 ---
 
-## 🚀 Tech Stack
+## 🛠️ Tech Stack
 
 * **Framework**: **Next.js 14** (App Router)
 * **Styling**: **Tailwind CSS**
 * **Database**: **MongoDB** with **Mongoose**
 * **Authentication**: **NextAuth.js v4**
 * **State Management**: **Zustand** (for modals and cart)
-* **Animations**: **Framer Motion**
+* **Animations**: **Framer Motion**, **GSAP**
 * **Payment Gateway**: **Razorpay**
 * **OTP Service**: **Twilio Verify API**
 * **Image CDN**: **Cloudinary**
-* **UI Components**: Shadcn UI (for navigation menus), Lucide React (icons)
+* **UI Components**: Shadcn UI (for navigation menu), Lucide React (icons)
 * **Forms & Validation**: Standard React state and custom validation logic
 
 ---
 
-## 🛠️ Getting Started
+## 🚀 Getting Started
 
 Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
@@ -133,23 +133,23 @@ The project uses the Next.js App Router paradigm for a clean and scalable struct
 
 The application features a RESTful API for handling all backend logic.
 
-| Endpoint                   | Method | Description                                    | Protected |
-| -------------------------- | ------ | ---------------------------------------------- | --------- |
-| `/api/auth/[...nextauth]`  | `ANY`  | Handles all NextAuth.js operations             | -         |
-| `/api/auth/otp/send`       | `POST` | Sends an OTP to a user's phone number          | No        |
-| `/api/auth/otp/verify`     | `POST` | Verifies an OTP and creates a user if new      | No        |
-| `/api/cart`                | `GET`  | Fetches the logged-in user's cart from the DB  | Yes       |
-| `/api/cart`                | `POST` | Saves the logged-in user's cart to the DB      | Yes       |
-| `/api/checkout`            | `POST` | Creates a Razorpay payment order               | Yes       |
-| `/api/orders`              | `GET`  | Fetches all past orders for the logged-in user | Yes       |
-| `/api/orders`              | `POST` | Saves a new order to the DB after payment      | Yes       |
-| `/api/profile`             | `PATCH`| Updates a user's profile (name, email, avatar) | Yes       |
-| `/api/profile/setup`       | `PATCH`| Sets up a new user's username                  | Yes       |
-| `/api/reviews`             | `GET`  | Fetches all reviews for a specific item        | No        |
-| `/api/reviews`             | `POST` | Submits a new review (or updates a rating)     | Yes       |
-| `/api/reviews/comment`     | `POST` | Adds a text comment to an existing review      | Yes       |
-| `/api/reviews/summary`     | `GET`  | Gets the average rating for all menu items     | No        |
-| `/api/reviews/user`        | `GET`  | Fetches all reviews left by the logged-in user | Yes       |
+| Endpoint                   | Method | Description                                    |
+| -------------------------- | ------ | ---------------------------------------------- |
+| `/api/auth/[...nextauth]`  | `ANY`  | Handles all NextAuth.js operations             |
+| `/api/auth/otp/send`       | `POST` | Sends an OTP to a user's phone number          |
+| `/api/auth/otp/verify`     | `POST` | Verifies an OTP and creates a user if new      |
+| `/api/cart`                | `GET`  | Fetches the logged-in user's cart from the DB  |
+| `/api/cart`                | `POST` | Saves the logged-in user's cart to the DB      |
+| `/api/checkout`            | `POST` | Creates a Razorpay payment order               |
+| `/api/orders`              | `GET`  | Fetches all past orders for the logged-in user |
+| `/api/orders`              | `POST` | Saves a new order to the DB after payment      |
+| `/api/profile`             | `PATCH`| Updates a user's profile (name, email, avatar) |
+| `/api/profile/setup`       | `PATCH`| Sets up a new user's username                  |
+| `/api/reviews`             | `GET`  | Fetches all reviews for a specific item        |
+| `/api/reviews`             | `POST` | Submits a new review (or updates a rating)     |
+| `/api/reviews/comment`     | `POST` | Adds a text comment to an existing review      |
+| `/api/reviews/summary`     | `GET`  | Gets the average rating for all menu items     |
+| `/api/reviews/user`        | `GET`  | Fetches all reviews left by the logged-in user |
 
 ---
 
@@ -164,13 +164,8 @@ The application features a RESTful API for handling all backend logic.
 
 ## 📋 Future Improvements
 
-* **Mobile UI/UX**: Dedicated layouts and functionality for mobile devices.
 * **Admin Dashboard**: A separate interface for managing users, orders, and menu items.
 * **Search Functionality**: Allow users to search for specific menu items.
 * **Database Form Submissions**: Storing career and franchise form submissions in the database instead of sending emails.
 
 ---
-
-## 📄 License
-
-This project is licensed under the MIT License.
