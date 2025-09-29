@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const ImageSlider = () => {
   const images = [
@@ -31,10 +32,10 @@ const ImageSlider = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      handleNext();
+      setCenterIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 3000);
     return () => clearInterval(interval);
-  }, [centerIndex]);
+  }, []);
 
   const handleNext = () => {
     setCenterIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -90,31 +91,45 @@ const ImageSlider = () => {
   };
 
   return (
-    <div className="flex items-center flex-col justify-between bg-[#fffbf0] h-screen overflow-hidden relative">
-      {images.map((image, index) => {
-        const position = getPosition(index);
-        return (
+    <div className="w-full bg-[#fffbf0] py-16">
+      {/* Desktop 3D Carousel (hidden on mobile) */}
+      <div className="hidden md:flex items-center flex-col justify-between h-screen overflow-hidden relative">
+        {images.map((image, index) => (
           <motion.div
             key={index}
             className="absolute rounded-2xl overflow-hidden shadow-lg"
             initial="hidden"
-            animate={position}
+            animate={getPosition(index)}
             variants={imageVariants}
             transition={{ duration: 0.6 }}
-            style={{
-              height: "75%",
-              aspectRatio: "1 / 1", // Makes it square
-              zIndex: 10,
-            }}
+            style={{ height: "75%", aspectRatio: "1 / 1" }}
           >
-            <img
+            <Image
               src={image}
               alt={`carousel-${index}`}
-              className="w-full h-full object-cover"
+              fill
+              style={{ objectFit: "cover" }}
             />
           </motion.div>
-        );
-      })}
+        ))}
+      </div>
+
+      {/* Mobile Grid Layout (visible only on mobile) */}
+      <div className="md:hidden grid grid-cols-2 gap-4 px-4">
+        {images.map((image, index) => (
+          <div
+            key={index}
+            className="relative w-full h-48 rounded-lg overflow-hidden shadow-lg"
+          >
+            <Image
+              src={image}
+              alt={`gallery-grid-${index}`}
+              fill
+              style={{ objectFit: "cover" }}
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

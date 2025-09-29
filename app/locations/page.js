@@ -1,4 +1,3 @@
-// app/locations/page.js
 "use client";
 
 import { useState } from "react";
@@ -8,7 +7,6 @@ import { Phone } from "lucide-react";
 import { locations } from "@/lib/locationsData";
 import dynamic from "next/dynamic";
 
-// Dynamically import the Map component with ssr turned off
 const Map = dynamic(() => import('@/components/Map'), { 
   ssr: false,
   loading: () => <div className="w-full h-[90%] bg-gray-200 rounded-2xl animate-pulse" />
@@ -77,7 +75,7 @@ export default function LocationsPage() {
             </div>
           </div>
 
-          {/* Right: Map Section (Fixed on larger screens) */}
+          {/* Right: Map Section */}
           <div className="md:col-span-1 md:sticky top-24 w-full h-96 md:h-[90%] bg-[#fffbf0] py-4 px-5 rounded-2xl shadow-lg">
             <h2 className="text-xl font-semibold mb-4 text-start">
               Coffee Heaven - Locations

@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const WhatsAppButton = () => {
-  const phoneNumber = "9876543210"; // Replace with actual number
+  const phoneNumber = "9876543210"; // Will be replaced with actual number in future
   const message = "Hello! I'm interested in Coffee Heaven.";
   const encodedMessage = encodeURIComponent(message);
   const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
@@ -12,14 +12,13 @@ const WhatsAppButton = () => {
       href={whatsappURL}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-8 right-4 bg-[#1bd741] text-white p-1 rounded-full shadow-lg hover:bg-green-500 transition duration-300 flex items-center justify-center text-3xl"
+      className="fixed bottom-8 right-4 bg-[#1bd741] text-white p-2 rounded-full shadow-lg hover:bg-green-500 transition duration-300 flex items-center justify-center text-3xl w-12 h-12 md:w-14 md:h-14"
     >
-      <div className="whatsapp-icon rounded-full overflow-hidden shadow-lg">
+      <div className="whatsapp-icon rounded-full overflow-hidden shadow-lg w-full h-full">
         <Image
           src="/images/whatsapp-icon.png"
           alt="WhatsApp Icon"
-          width={55}
-          height={55}
+          fill
           className="rounded-full"
           style={{ objectFit: "cover" }}
         />

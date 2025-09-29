@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { MapPin, Clock, CalendarDays, X } from "lucide-react";
-import { defaultHead } from "next/head";
 
 export default function Careers() {
   const [isModalOpen, setIsModalOpen] = useState(false);

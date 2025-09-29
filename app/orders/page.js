@@ -1,4 +1,3 @@
-// app/orders/page.js
 "use client";
 
 import { useState, useEffect } from "react";
@@ -13,7 +12,7 @@ export default function OrderHistoryPage() {
   const { data: session, status } = useSession();
   const router = useRouter();
   const [orders, setOrders] = useState([]);
-  const [userReviews, setUserReviews] = useState({}); // Renamed for clarity
+  const [userReviews, setUserReviews] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState("");
   const { clearCart, addToCart } = useCartStore();
@@ -35,7 +34,7 @@ export default function OrderHistoryPage() {
           const reviewsData = await reviewsRes.json();
 
           setOrders(ordersData.orders);
-          setUserReviews(reviewsData.reviews); // Use the new 'reviews' key
+          setUserReviews(reviewsData.reviews);
         } catch (err) {
           setError(err.message);
         } finally {

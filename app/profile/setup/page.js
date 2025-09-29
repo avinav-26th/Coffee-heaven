@@ -1,4 +1,3 @@
-// app/profile/setup/page.js
 "use client";
 
 import { useState } from 'react';

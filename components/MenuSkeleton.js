@@ -1,4 +1,3 @@
-// components/MenuSkeleton.js
 export default function MenuSkeleton() {
   return (
     <div id="menu" className="w-full max-w-6xl mx-auto py-10 space-y-10 animate-pulse">

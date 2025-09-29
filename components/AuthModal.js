@@ -1,4 +1,3 @@
-// components/AuthModal.js
 "use client";
 
 import { useState } from "react";
@@ -43,60 +42,13 @@ export default function AuthModal() {
     }
   };
 
-  // const handleVerifyOtp = async (e) => {
-  //   e.preventDefault();
-  //   setIsLoading(true);
-  //   setError('');
-
-  //   try {
-  //     // First, verify the OTP with our custom endpoint
-  //     const verifyRes = await fetch('/api/auth/otp/verify', {
-  //       method: 'POST',
-  //       headers: { 'Content-Type': 'application/json' },
-  //       body: JSON.stringify({ mobileNumber, otp }),
-  //     });
-
-  //     const verifyData = await verifyRes.json();
-
-  //     if (!verifyRes.ok) {
-  //       throw new Error(verifyData.message || 'OTP verification failed.');
-  //     }
-
-  //     // If OTP is verified, now sign in with NextAuth using our special provider
-  //     toast.success('OTP Verified successfully!');
-  //     const signInRes = await signIn('otp-credentials', {
-  //       mobileNumber,
-  //       redirect: false, // Important: do not redirect the page
-  //     });
-
-  //     if (signInRes?.error) {
-  //       throw new Error('Login failed. Please try again.');
-  //     }
-
-  //     // If sign in is successful, close the modal and check if onboarding is needed
-  //     resetForm();
-  //     closeModal();
-
-  //     // Check if the user needs to complete their profile (e.g., set a username)
-  //     if (!verifyData.user.username) {
-  //       // We will create this page next
-  //       router.push('/profile/setup');
-  //     }
-
-  //   } catch (err) {
-  //     setError(err.message);
-  //   } finally {
-  //     setIsLoading(false);
-  //   }
-  // };
-
   const handleVerifyOtp = async (e) => {
     e.preventDefault();
     setIsLoading(true);
     setError("");
 
     try {
-      // First, verify the OTP with our custom endpoint
+      // First, verify the OTP with my custom endpoint
       const verifyRes = await fetch("/api/auth/otp/verify", {
         method: "POST",
         headers: { "Content-Type": "application/json" },

@@ -1,4 +1,3 @@
-// hooks/useOnClickOutside.js
 import { useEffect } from 'react';
 
 export function useOnClickOutside(ref, handler) {

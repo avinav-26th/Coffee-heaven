@@ -28,13 +28,13 @@ const ScrollToTopBtn = () => {
         scale: showScrollButton ? 1 : 0.8,
       }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
-      className="fixed bottom-28 right-6"
+      className="fixed bottom-[90px] md:bottom-28 right-5 md:right-6 z-50"
     >
       <button
         onClick={scrollToTop}
-        className="bg-amber-700 text-white text-center leading-none p-4 rounded-full shadow-xl opacity-25 hover:opacity-35 transition duration-300 flex items-center justify-center te"
+        className="bg-amber-700 text-white text-center leading-none p-2 md:p-4 rounded-full shadow-xl opacity-25 hover:opacity-35 transition duration-300 flex items-center justify-center"
       >
-        <Triangle className="w-5 h-5 self-center" />
+        <Triangle className="h-4 w-4 md:w-5 md:h-5 self-center" />
       </button>
     </motion.div>
   );

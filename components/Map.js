@@ -1,4 +1,3 @@
-// components/Map.js
 "use client";
 
 import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
@@ -7,7 +6,6 @@ import "leaflet.fullscreen/Control.FullScreen.css";
 import L from "leaflet";
 import { useEffect } from "react";
 
-// Fix for default icon issue with Leaflet and Webpack
 import icon from 'leaflet/dist/images/marker-icon.png';
 import iconShadow from 'leaflet/dist/images/marker-shadow.png';
 let DefaultIcon = L.icon({

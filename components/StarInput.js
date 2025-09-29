@@ -1,4 +1,3 @@
-// components/StarInput.js
 "use client";
 
 import { useState, useEffect } from 'react';
@@ -24,8 +23,6 @@ export default function StarInput({ item, existingRating }) {
       
       if (!res.ok) {
         const data = await res.json();
-        // If a review already exists, it might return a 409, which is fine
-        // We can handle specific update logic if needed, but for now this is okay
         if(res.status !== 409) throw new Error(data.message);
       }
       

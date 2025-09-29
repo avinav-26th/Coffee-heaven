@@ -1,4 +1,3 @@
-// store/useAuthModal.js
 import { create } from 'zustand';
 
 const useAuthModal = create((set) => ({

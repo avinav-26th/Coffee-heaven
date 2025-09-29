@@ -1,4 +1,3 @@
-// components/NavActions.js
 "use client";
 
 import React, { useState, useRef } from "react";

@@ -1,4 +1,3 @@
-// components/ReviewModal.js
 "use client";
 
 import useReviewModal from '@/store/useReviewModal';

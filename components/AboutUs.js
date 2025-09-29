@@ -7,10 +7,11 @@ import Link from "next/link";
 export default function AboutUs() {
   return (
     <section
-      id="about"
-      className="py-16 px-6 bg-[#fff5e0] rounded-[2.5rem] mx-[5.5rem] shadow-lg"
-    >
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center">
+  id="about"
+  className="py-16 px-4 md:px-6 bg-[#fff5e0] rounded-[2.5rem] mx-4 sm:mx-8 md:mx-[5.5rem] shadow-lg"
+>
+      {/* <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center"> */}
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center text-center md:text-left">
         {/* Left Side - Image */}
         <motion.div
           className="w-full md:w-1/2"
@@ -37,7 +38,7 @@ export default function AboutUs() {
           viewport={{ once: true }}
         >
           {/* Logo */}
-          <div className="mb-4">
+          <div className="hidden md:block mb-4">
             <Image
               src="/images/cafe-logo.png"
               alt="Cafe Logo"

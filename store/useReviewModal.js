@@ -1,4 +1,3 @@
-// store/useReviewModal.js
 import { create } from 'zustand';
 
 const useReviewModal = create((set) => ({

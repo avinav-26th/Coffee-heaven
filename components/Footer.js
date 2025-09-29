@@ -17,10 +17,10 @@ const Footer = () => {
       id="footer"
       className="bg-[#fff5e0] w-full min-h-[90vh] rounded-t-[50px] px-5 pt-5 flex flex-col justify-between"
     >
-      <span className="footer-tagline text-4xl font-bold pl-[160px] pt-10">
+      <span className="footer-tagline text-3xl md:text-4xl font-bold px-4 md:pl-[160px] pt-10 text-center md:text-left">
         More Than Coffee, A Haven for the Soul
       </span>
-      <div className="footer-sections-container-div mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div className="footer-sections-container-div mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 px-4 md:px-0">
         {/* Contact Us Section */}
         <div className="space-y-4 flex flex-col items-start">
           <h2 className="text-xl font-semibold underline decoration-dashed underline-offset-[6px]">
@@ -86,7 +86,10 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/pages/locations/#locations" className="footer-item">
+                <Link
+                  href="/pages/locations/#locations"
+                  className="footer-item"
+                >
                   Locations
                 </Link>
               </li>
@@ -152,12 +155,12 @@ const Footer = () => {
           </button>
         </div>
       </div>
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center text-sm pt-3 md:text-md md:pt-0 xl:text-md xl:pt-0">
         <p className="text-center">Copyright &copy; 2025 </p>
-        <span className="rounded-full text-[10px] border-[2.5px] border-black mx-4"></span>{" "}
-        <p>Coffee Heaven</p>
-        <span className="rounded-full text-[10px] border-[2.5px] border-black mx-4"></span>
-        <p>Designed by Avico Apps</p>
+        <span className="rounded-full border-[2.5px] border-black mx-4"></span>{" "}
+        <p className="text-center">Coffee Heaven</p>
+        <span className="rounded-full border-[2.5px] border-black mx-4"></span>
+        <p className="text-center">Designed by Avico Apps</p>
       </div>
     </footer>
   );

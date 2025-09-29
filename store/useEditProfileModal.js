@@ -1,4 +1,3 @@
-// store/useEditProfileModal.js
 import { create } from 'zustand';
 
 const useEditProfileModal = create((set) => ({
