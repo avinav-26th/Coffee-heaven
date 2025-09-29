@@ -35,7 +35,7 @@ A full-stack, modern e-commerce web application for a fictional cafe chain. This
 
 ---
 
-## 🚀 Tech Stack
+## 🛠️ Tech Stack
 
 * **Framework**: **Next.js 14** (App Router)
 * **Styling**: **Tailwind CSS**
@@ -51,7 +51,7 @@ A full-stack, modern e-commerce web application for a fictional cafe chain. This
 
 ---
 
-## 🛠️ Getting Started
+## 🚀 Getting Started
 
 Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
